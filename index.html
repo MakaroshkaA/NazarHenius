@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta charset="UTF-8">
+ 	<title>Обратый отсчет MEN T2</title>
+ 	<style>
+ 		body{
+ 			background: url(MENT2BG.jpg);
+ 		}
+ 		.container{
+ 			color: black;
+ 		}
+ 		.center {
+ 			position: absolute ;
+ 			top: 50%;
+ 			left: 10%;
+ 			text-align: center;
+ 		}
+
+ 		h1, p1 {
+ 			font-family: sans-serif;
+ 			font-weight: lighter;
+
+ 		}
+ 		h1 {
+ 			font-size: 50px;
+ 		}
+ 		p1 {
+ 			font-size: 30px;
+ 			letter-spacing: 5px;
+ 		}
+ 		
+
+ 		</style>
+ 	</head>
+ 	<body>
+ 		<div class="container">
+ 			<div class="center">
+ 				<h1>До премьера блокбастера Мен Т2 осталось</h1>
+ 				<hr>
+ 				<p1 id="timer"></p1>
+
+ 				</div>
+
+ 		 	</div>
+
+ 				<script>
+ 						var countDownDate = new Date("Dec 31, 2021 00:00:00").getTime();
+ 						var countDownFunction = setInterval(function () {
+ 							var now = new Date().getTime();
+ 							
+ 							var distance = countDownDate - now;
+
+ 							var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+ 						    var hours = Math.floor((distance % (100 *  60 * 60 * 24)) / (1000 * 60 * 60));
+ 						    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+ 						    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ 					
+ 							document.getElementById("timer").innerHTML = days + "д " + hours + "ч " + minutes + "м " + seconds + "с "
+ 					
+ 					})
+				
+
+ 						
+
+ 						
+ 				
+ 					</script>
+ 					
+
+ 		</body>
